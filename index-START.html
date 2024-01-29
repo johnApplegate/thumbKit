@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>thumbkit</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="keys">
+
+    <div data-key="32" class="key" id="kick">
+      <kbd>SB</kbd>
+      <span class="sound">kick</span>
+    </div>
+
+    <div data-key="74" class="key" id="hihat">
+      <kbd>J</kbd>
+      <span class="sound">hihat</span>
+    </div>
+    
+    <div data-key="70" class="key" id="snare">
+      <kbd>F</kbd> 
+      <span class="sound">snare</span>
+    </div>
+
+    <div data-key="85" class="key" id="lefttom">
+      <kbd>U</kbd>
+      <span class="sound">LEFT tom</span>
+    </div>
+    
+    <div data-key="73" class="key" id="righttom">
+      <kbd>I</kbd>
+      <span class="sound">RIGHT tom</span>
+    </div>
+    
+    <div data-key="76" class="key" id="floortom">
+      <kbd>L</kbd>
+      <span class="sound">FLOOR tom</span>
+    </div>
+
+    <diuih  v data-key="69" class="key" id="crash">
+      <kbd>E</kbd>
+      <span class="sound">CRASH</span>
+    </div>
+
+    <div data-key="75" class="key" id="ride">
+      <kbd>K</kbd>
+      <span class="sound">RIDE</span>
+    </div>
+   
+
+  <audio data-key="32" src="sounds/Cymatics - Lofi Kick 1 - C.wav"></audio>
+  <audio data-key="74" src="sounds/Acoustic Closed Hat 03.wav"></audio> 
+  <audio data-key="70" src="sounds/Acoustic Snare 06.wav"></audio>
+  <audio data-key="85" src="sounds/Acoustic High Tom 01.wav"></audio>
+  <audio data-key="73" src="sounds/Acoustic Mid Tom 04.wav"></audio>
+  <audio data-key="76" src="sounds/Acoustic Tom Low 04.wav"></audio>
+  <audio data-key="69" src="sounds/Acoustic Crash 01.wav"></audio>
+  <audio data-key="75" src="sounds/Acoustic Ride 02.wav"></audio>
+    
+
+<script>   
+    
+   function playSound(e) {
+    const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
+    const key = document.querySelector(`.key[data-key="${e.keyCode}"]`);
+    if(!audio) return;
+    audio.currentTime = 0;
+    audio.play();
+    key.classList.add('playing');
+   }
+
+  function removeTransition(e){
+    if(e.propertyName !== 'transform') return;
+    this.classList.remove('playing');
+   }
+   
+   const keys = document.querySelectorAll('.key');
+   keys.forEach(key => key.addEventListener('transitionend', removeTransition));
+   window.addEventListener('keydown', playSound);
+
+</script>
+
+
+</body>
+</html>
+
+
+<!-- spacebar = kick = 32
+      f = snare = 70
+      j = hi hat = 74
+      u = tom l = 85
+      i = tom r = 73
+      l = tom floor = 76
+      e = crash = 69
+      h = ride = 72
+    -->
+
+
+
