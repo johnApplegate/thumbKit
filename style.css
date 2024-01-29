@@ -13,7 +13,8 @@ html {
   background: url('./ki818d55.jpeg') center;
   background-position: center center;
   background-attachment: fixed;
-  background-size: cover;
+  background-size: contain;
+  background-color: #ffffff; 
 }
 
 body,html {
@@ -36,12 +37,12 @@ body,html {
   margin: 1rem;
   font-size: 1.5rem;
   padding: 1rem .5rem;
-  transition: all 1.2s ease;
+  transition: all 0.1s ease;
   width: 9rem;
   text-align: center;
   color: white;
   background: rgba(0,0,0,0.4);
-  text-shadow: 0 0 .5rem black;
+  text-shadow: 0 0 0.3rem black;
 }
 
 #kick {
