@@ -15,6 +15,10 @@ html {
   background-attachment: fixed;
   background-size: contain;
   background-color: #ffffff; 
+  background-repeat: no-repeat; /* Prevent the background image from repeating */
+  height: 100%; /* Ensure the HTML element takes the full height of the viewport */
+  margin: 0; /* Remove default margin to prevent white space around the body */
+  overflow: hidden; /* Hide overflow to prevent scrollbars */
 }
 
 body,html {
@@ -37,8 +41,8 @@ body,html {
   margin: 1rem;
   font-size: 1.5rem;
   padding: 1rem .5rem;
-  transition: all 0.1s ease;
-  width: 9rem;
+  transition: all 0.2s ease;
+  width: 8rem;
   text-align: center;
   color: white;
   background: rgba(0,0,0,0.4);
@@ -47,49 +51,49 @@ body,html {
 
 #kick {
   position: absolute;
-  left: 43%;
+  left: 46%;
   top: 58%;
 }
 
 #snare {
   position: absolute;
-  left: 25%;
+  left: 34%;
   top: 46.5%;
 }
 
 #hihat {
   position: absolute;
-  left: 9%;
+  left: 25%;
   top: 37%;
 }
 
 #lefttom {
   position: absolute;
-  left: 33%;
-  top: 23%;
+  left: 39%;
+  top: 25%;
 }
 
 #righttom {
   position: absolute;
-  left: 54%;
-  top: 23%;
+  left: 52%;
+  top: 25%;
 }
 
 #floortom {
   position: absolute;
-  left: 67%;
+  left: 60%;
   top: 47%;
 }
 
 #crash {
   position: absolute;
-  left: 19%;
+  left: 33%;
   top: 12%;
 }
 
 #ride {
   position: absolute;
-  left: 78%;
+  left: 66%;
   top: 31%;
 }
 
