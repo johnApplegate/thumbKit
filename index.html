@@ -6,21 +6,16 @@
   <link rel="stylesheet" href="style.css">
   <script defer src="script.js"></script>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-      <!--Import materialize.css-->
-      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
-
-      <!--Let browser know website is optimized for mobile-->
-      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
+  <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 </head>
 
-<body>
+<body class="container">
  
-
   <div class="keys">
     
-    <div class="title">
-      <h1 class="z-depth-4">thumbKit</h1>
+    <div class="title ">
+      <h1 class="z-depth-4">.thumbKit</h1>
     </div>
     
     <div data-key="32" class="key responsive-img" id="kick">
@@ -53,16 +48,22 @@
       <span class="sound">f tom</span>
     </div>
 
-    <diuih  v data-key="69" class="key" id="crash">
+    <div data-key="69" class="key" id="crash">
       <kbd>E</kbd>
       <span class="sound">crash</span>
     </div>
 
-    <div data-key="75" class="key" id="ride">
+    <div data-key="79" class="key" id="ride">
+      <kbd>O</kbd>
+      <span class="sound">ride</span>
+    </div>
+
+  </div>  
+    <!-- <div data-key="75" class="key" id="ride">
       <kbd>K</kbd>
       <span class="sound">ride</span>
     </div>
-   
+    -->
 
   <audio data-key="32" src="sounds/Cymatics - Lofi Kick 1 - C.wav"></audio>
   <audio data-key="74" src="sounds/Acoustic Closed Hat 03.wav"></audio> 
@@ -71,47 +72,13 @@
   <audio data-key="73" src="sounds/Acoustic Mid Tom 04.wav"></audio>
   <audio data-key="76" src="sounds/Acoustic Tom Low 04.wav"></audio>
   <audio data-key="69" src="sounds/Acoustic Crash 01.wav"></audio>
-  <audio data-key="75" src="sounds/Acoustic Ride 02.wav"></audio>
+  <audio data-key="79" src="sounds/Acoustic Ride 02.wav"></audio>
     
 
-<!-- <script>   
-    
-   function playSound(e) {
-    const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
-    const key = document.querySelector(`.key[data-key="${e.keyCode}"]`);
-    if(!audio) return;
-    audio.currentTime = 0;
-    audio.play();
-    key.classList.add('playing');
-   }
 
-  function removeTransition(e){
-    if(e.propertyName !== 'transform') return;
-    this.classList.remove('playing');
-   }
-   
-   const keys = document.querySelectorAll('.key');
-   keys.forEach(key => key.addEventListener('transitionend', removeTransition));
-   window.addEventListener('keydown', playSound);
-
-</script> -->
-
-<!--JavaScript at end of body for optimized loading-->
 <script type="text/javascript" src="js/materialize.min.js"></script>
 
 </body>
 </html>
-
-
-<!-- spacebar = kick = 32
-      f = snare = 70
-      j = hi hat = 74
-      u = tom l = 85
-      i = tom r = 73
-      l = tom floor = 76
-      e = crash = 69
-      h = ride = 72
-    -->
-
 
 
